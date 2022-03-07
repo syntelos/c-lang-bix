@@ -35,11 +35,8 @@ BINT_SOURCES := c-endian-bint/src/*.c
 
 BINT_CCFLAGS := $(PORTABILITY) -Ic-endian-bint/inc $(WARNINGS) $(DEBUG)
 
-bix: $(HEADERS) $(BINT_HEADERS) $(SOURCES) $(BINT_SOURCES) main/bix.c
+bix: c-endian-bint/prep/bint $(HEADERS) $(BINT_HEADERS) $(SOURCES) $(BINT_SOURCES) main/bix.c
 	$(CC) $(shell c-endian-bint/prep/bint) $(CCFLAGS) -o $@ $(SOURCES) $(BINT_SOURCES) main/bix.c $(LDFLAGS)
-
-c-endian-bint/bint: c-endian-bint/prep/bint $(BINT_HEADERS) $(BINT_SOURCES) c-endian-bint/bint.c
-	$(CC) $(shell c-endian-bint/prep/bint) $(BINT_CCFLAGS) -o $@ $(BINT_SOURCES) c-endian-bint/bint.c
 
 c-endian-bint/prep/bint: c-endian-bint/prep/bint.c
 	$(CC) -o c-endian-bint/prep/bint c-endian-bint/prep/bint.c

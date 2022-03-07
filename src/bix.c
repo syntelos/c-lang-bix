@@ -79,7 +79,7 @@ size_t bix_count(char* source, size_t length){
 bix* bix_decode(char* hex, size_t count){
     if (null != hex && 0 != count){
 
-        bix *bx = bix_init((count>>1)+1);
+        bix *bx = bix_init(count>>1);
 
         if (null != bx){
 
@@ -177,7 +177,7 @@ bix* bix_encode(char* source, size_t length){
 
     if (null != source && 0 != length){
 
-        bix* bx = bix_init((length<<1)+1);
+        bix* bx = bix_init(length<<1);
         if (null != bx){
             off_t index;
             char *ip = source;
