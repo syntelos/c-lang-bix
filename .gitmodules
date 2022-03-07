@@ -1,0 +1,3 @@
+[submodule "c-endian-bint"]
+	path = c-endian-bint
+	url = git@github.com:syntelos/c-endian-bint.git
