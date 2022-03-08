@@ -1,9 +1,9 @@
 ﻿bix is yet another ordinary binhex
 
   The seven bit ASCII hexidecimal encoding of a binary octet
-  sequence replaces each four bit nibble with an ASCII octet
-  from the set of (0-9) and (A-F).  The binary content
-  payload size is doubled in this encoding.
+  sequence replaces each four bit nibble with a (seven bit)
+  ASCII octet from the set of (0-9) and (A-F).  The binary
+  content payload size is doubled in this encoding.
 
 Implementation
 
@@ -12,8 +12,9 @@ Implementation
 
 Notes
 
-  The HEX encoding is an eight bit band that doubles the
-  size of the payload binary band.
+  HEX is a seven bit ASCII encoding that doubles the size of
+  the eight bit payload binary band.  Base64 is the usual
+  alternative (to Base16).
 
 See also
 
