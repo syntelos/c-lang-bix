@@ -27,4 +27,6 @@ Configuration
 
     git clone --recurse-submodules <github:syntelos/c-lang-bix>
 
+  Alternatively, run "./sumo.sh init" to initialize submodules.
+
   Build using "make" (clang SUSv3 POSIX.1-2001).
